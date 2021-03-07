@@ -170,6 +170,4 @@ Project Link: [https://github.com/WeLoveRice/cloudCastAPI](https://github.com/We
 [issues-shield]: https://img.shields.io/github/issues/WeLoveRice/cloudCastAPI.svg?style=for-the-badge
 [issues-url]: https://github.com/WeLoveRice/cloudCastAPI/issues
 [license-shield]: https://img.shields.io/github/license/WeLoveRice/cloudCastAPI.svg?style=for-the-badge
-[license-url]: https://github.com/WeLoveRice/cloudCastAPI/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/WeLoveRice
+[license-url]: https://github.com/WeLoveRice/cloudCastAPI/blob/main/LICENSE

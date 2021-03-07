@@ -64,12 +64,11 @@
 <!--
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 -->
-cloudCastAPI provides access to NOAA weather models deployed as a RESTful API on Google Cloud Platform.
+cloudCastAPI provides access to NOAA weather models deployed as a RESTful API.
 
 
 ### Built With
-* [Google Cloud Platform](https://cloud.google.com/)
-* [Terraform](https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/getting_started)
+* [Docker](https://www.docker.com/)
 * [Python 3.8](https://www.python.org/downloads/)
 * [pvlib](https://github.com/pvlib/pvlib-python)
 * [FastAPI](https://github.com/tiangolo/fastapi)
@@ -85,10 +84,11 @@ To get a local copy up and running follow these simple steps.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* Python
-  ```sh
-  sudo apt-get install python3.8
-  ```
+* Docker
+ ```sh
+ curl -fsSL https://get.docker.com -o get-docker.sh
+ sudo sh get-docker.sh
+ ```
 
 ### Installation
 
@@ -96,9 +96,9 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    git clone https://github.com/WeLoveRice/cloudCastAPI.git
    ```
-2. Install NPM packages
+2. Build docker image
    ```sh
-   pip install -r requirements.txt
+   docker build .
    ```
 
 

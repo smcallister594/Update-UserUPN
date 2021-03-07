@@ -15,7 +15,7 @@
   <h3 align="center">cloudCastAPI</h3>
 
   <p align="center">
-    NOAA Weather Model deployed as a RESTful API using FastAPI.
+    NOAA Weather Models deployed as a RESTful API.
     <br />
     <a href="https://github.com/WeLoveRice/cloudCastAPI"><strong>Explore the docs »</strong></a>
     <br />

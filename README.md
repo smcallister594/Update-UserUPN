@@ -82,10 +82,11 @@ To get a local copy up and running follow these simple steps.
 * Assuming user Joe Bloggs AD Object looks like this 
 ``` User UPN Logon - Bloggs.Joe@company.contoso.com 
 User SamAccountName Logon - domain\bloggs.joe
-E-Mail - joe.bloggs@contoso.com```
+E-Mail - joe.bloggs@contoso.com 
+```
 
 1. This will update Joe Bloggs UPN Logon to match his email address but leave his SamAccountName unchanged
-```Update-UserUPN bloggs.joe
+``` Update-UserUPN bloggs.joe
 ```
 
 <!-- ROADMAP 
@@ -118,8 +119,6 @@ Distributed under the AGPLv3.0 License. See `LICENSE` for more information.
 <!-- CONTACT 
 ## Contact
 
-Joe McGinley - api@cleardarksky.co.uk
-
 Project Link: [https://github.com/smcallister594/Update-UserUPN/]https://github.com/smcallister594/Update-UserUPN/)
 
 -->
@@ -127,7 +126,7 @@ Project Link: [https://github.com/smcallister594/Update-UserUPN/]https://github.
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* []()
+* [Chris Dent](https://gist.github.com/indented-automation)
 * []()
 * []()
 

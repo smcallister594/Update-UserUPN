@@ -73,20 +73,23 @@ To get a local copy up and running follow these simple steps.
 ### Installation
 
 1. This module is available via the Powershell Gallery
-``` Install-Module -Name Update-UserUPN
+```Powershell
+Install-Module -Name Update-UserUPN
 ```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
 * Assuming user Joe Bloggs AD Object looks like this 
-``` User UPN Logon - Bloggs.Joe@company.contoso.com 
+```Powershell
+User UPN Logon - Bloggs.Joe@company.contoso.com 
 User SamAccountName Logon - domain\bloggs.joe
 E-Mail - joe.bloggs@contoso.com 
 ```
 
 1. This will update Joe Bloggs UPN Logon to match his email address but leave his SamAccountName unchanged
-``` Update-UserUPN bloggs.joe
+```Powershell
+Update-UserUPN bloggs.joe
 ```
 
 <!-- ROADMAP 

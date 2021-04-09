@@ -1,30 +1,21 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-
-<!-- PROJECT LOGO 
+<!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/WeLoveRice/cloudCastAPI">
+  <a href="https://github.com/smcallister594/Update-UserUPN">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
-  -->
+
 
   <h3 align="center">Update-UserUPN</h3>
 
   <p align="center">
-    NOAA Weather Models deployed as a RESTful API.
     <br />
-    <a href="https://github.com/WeLoveRice/cloudCastAPI"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/smcallister594/Update-UserUPN"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <!--
-    <a href="https://github.com/WeLoveRice/cloudCastAPI">View Demo</a>
-    ·-->
-    <a href="https://github.com/WeLoveRice/cloudCastAPI/issues">Report Bug</a>
+    <a href="https://github.com/smcallister594/Update-UserUPN/issues">Report Bug</a>
     ·
-    <a href="https://github.com/WeLoveRice/cloudCastAPI/issues">Request Feature</a>
+    <a href="https://github.com/smcallister594/Update-UserUPN/issues">Request Feature</a>
   </p>
 </p>
 
@@ -63,17 +54,11 @@
 <!--
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 -->
-cloudCastAPI provides access to NOAA weather models deployed as a RESTful API.
-
+This module was written as part of a project to migrate all users to Exchange online. A requirement for this was to have all users email addresses and UPNs match. This script looks up a user based on their SamAccountName or by OU and updates their UPN to match their EmailAddress
 
 ### Built With
-* [Docker](https://www.docker.com/)
-* [Python 3.8](https://www.python.org/downloads/)
-* [pvlib](https://github.com/pvlib/pvlib-python)
-* [FastAPI](https://github.com/tiangolo/fastapi)
-* [FastAPI-cache](https://github.com/long2ice/fastapi-cache)
-
-
+* [VSCode](https://code.visualstudio.com/)
+* [Powershell 7](https://devblogs.microsoft.com/powershell/announcing-powershell-7-0/)
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -82,40 +67,32 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* Docker
- ```sh
- curl -fsSL https://get.docker.com -o get-docker.sh
- sudo sh get-docker.sh
- ```
-
+* This has been tested in Powershell V5.1 and V7
+* Active Directory PowerShell module
+* Appropriate domain suffixes configured in Active Directory
 ### Installation
 
-1. Clone the repo
-   ```sh
-   git clone https://github.com/WeLoveRice/cloudCastAPI.git
-   ```
-2. Build docker image
-   ```sh
-   docker build .
-   ```
-
-
+1. This module is available via the Powershell Gallery
+``` Install-Module -Name Update-UserUPN
+```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+* Assuming user Joe Bloggs AD Object looks like this 
+``` User UPN Logon - Bloggs.Joe@company.contoso.com 
+User SamAccountName Logon - domain\bloggs.joe
+E-Mail - joe.bloggs@contoso.com```
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+1. This will update Joe Bloggs UPN Logon to match his email address but leave his SamAccountName unchanged
+```Update-UserUPN bloggs.joe
+```
 
-
-
-<!-- ROADMAP -->
+<!-- ROADMAP 
 ## Roadmap
 
-See the [open issues](https://github.com/WeLoveRice/cloudCastAPI/issues) for a list of proposed features (and known issues).
-
+See the [open issues](https://github.com/smcallister594/Update-UserUPN/issues) for a list of proposed features (and known issues).
+-->
 
 
 <!-- CONTRIBUTING -->
@@ -131,21 +108,21 @@ Contributions are what make the open source community such an amazing place to b
 
 
 
-<!-- LICENSE -->
+<!-- LICENSE 
 ## License
 
 Distributed under the AGPLv3.0 License. See `LICENSE` for more information.
+-->
 
 
-
-<!-- CONTACT -->
+<!-- CONTACT 
 ## Contact
 
 Joe McGinley - api@cleardarksky.co.uk
 
-Project Link: [https://github.com/WeLoveRice/cloudCastAPI](https://github.com/WeLoveRice/cloudCastAPI)
+Project Link: [https://github.com/smcallister594/Update-UserUPN/]https://github.com/smcallister594/Update-UserUPN/)
 
-
+-->
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements

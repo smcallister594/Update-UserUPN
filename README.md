@@ -127,22 +127,3 @@ Project Link: [https://github.com/smcallister594/Update-UserUPN/]https://github.
 ## Acknowledgements
 
 * [Chris Dent](https://gist.github.com/indented-automation)
-* []()
-* []()
-
-
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/WeLoveRice/cloudCastAPI.svg?style=for-the-badge
-[contributors-url]: https://github.com/WeLoveRice/cloudCastAPI/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/WeLoveRice/cloudCastAPI.svg?style=for-the-badge
-[forks-url]: https://github.com/WeLoveRice/cloudCastAPI/network/members
-[stars-shield]: https://img.shields.io/github/stars/WeLoveRice/cloudCastAPI.svg?style=for-the-badge
-[stars-url]: https://github.com/WeLoveRice/cloudCastAPI/stargazers
-[issues-shield]: https://img.shields.io/github/issues/WeLoveRice/cloudCastAPI.svg?style=for-the-badge
-[issues-url]: https://github.com/WeLoveRice/cloudCastAPI/issues
-[license-shield]: https://img.shields.io/github/license/WeLoveRice/cloudCastAPI.svg?style=for-the-badge
-[license-url]: https://github.com/WeLoveRice/cloudCastAPI/blob/main/LICENSE

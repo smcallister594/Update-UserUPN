@@ -2,7 +2,6 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 
 <!-- PROJECT LOGO 
 <br />
@@ -12,7 +11,7 @@
   </a>
   -->
 
-  <h3 align="center">cloudCastAPI</h3>
+  <h3 align="center">Update-UserUPN</h3>
 
   <p align="center">
     NOAA Weather Models deployed as a RESTful API.

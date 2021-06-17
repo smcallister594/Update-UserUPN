@@ -10,18 +10,22 @@ Function Update-UserUPN {
         $ReportOnly
     )
     Process {
-        if ($ReportOnly.IsPresent){
-            Get-ADUser -SearchBase $OU -filter * -properties EmailAddress | Select UserPrincipalName, EmailAddress, Enabled | Sort-Object EmailAddress
+        $params = @{
+            Properties = 'EmailAddress', 'Description'
         }
-        elseif ($OU) {
-            $users = Get-ADUser -filter {Enabled -eq $True} -SearchBase $OU -Properties EmailAddress
+        if ($OU) {
+            $params['Filter'] = { Enabled -eq $true }
+            $params['SearchBase'] = $OU
+        } elseif ($SamAccountName) {
+            $params['Identity'] = $SamAccountName
+        }
+        $users = Get-ADUser @params
+        if ($ReportOnly) {
+            $users | Select-Object UserPrincipalName, EmailAddress, Description, Enabled | Sort-Object EmailAddress
+        } else {
             foreach ($user in $users) {
-                Set-ADUser -Identity $user.$SamAccountName -UserPrincipalName $user.EmailAddress
+                Set-ADUser -Identity $user -UserPrincipalName $user.EmailAddress
             }
-        }
-        elseif ($SamAccountName) {
-            $user = Get-ADUser -Identity $SamAccountName -Properties EmailAddress
-            Set-ADUser -Identity $user.SamAccountName -UserPrincipalName $user.EmailAddress
         }
     }
 }

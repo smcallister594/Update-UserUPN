@@ -24,7 +24,7 @@ Function Update-UserUPN {
             $users | Select-Object UserPrincipalName, EmailAddress, Description | Sort-Object EmailAddress
         } else {
             foreach ($user in $users) {
-                Set-ADUser -Identity $user -UserPrincipalName $user.EmailAddress
+                Set-ADUser -Identity $user.SamAccountName -UserPrincipalName $user.EmailAddress
             }
         }
     }

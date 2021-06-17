@@ -84,10 +84,31 @@ User SamAccountName Logon - domain\bloggs.joe
 E-Mail - joe.bloggs@contoso.com 
 ```
 
-1. This will update Joe Bloggs UPN Logon to match his email address but leave his SamAccountName unchanged
+1. This will update Joe Bloggs UPN to match his email address but leave his SamAccountName unchanged
 ```Powershell
-Update-UserUPN bloggs.joe
+Update-UserUPN -SamAccountName bloggs.joe
 ```
+2. This will update the UPN's of all users, in the OU specified, to match their email address
+```Powershell
+Update-UserUPN -OU "OU=UsersSubOU,OU=Users,DC=company,DC=com"
+```
+3. This will produce a list of the users current UPN and what their UPN will become (Email Address) should you run either of the above commands, As well as their AD Description (This was more for my benefit and can easily be removed or modified)
+```Powershell
+Update-UserUPN -OU "OU=UsersSubOU,OU=Users,DC=company,DC=com" -ReportOnly
+
+UserPrincipalName            EmailAddress                     Description
+-----------------            ------------                     -----------
+Bloggs.Joe                   Joe.Bloggs@domain.com            Developer
+BGatesUPN                    Bill.Gates@domain.com            Developer
+APersonUPN                   Angela.Person@domain.com         Developer
+
+Update-UserUPN -SamAccountName bloggs.joe -ReportOnly
+
+UserPrincipalName            EmailAddress                     Description
+-----------------            ------------                     -----------
+Bloggs.Joe                   Joe.Bloggs@domain.com            Developer
+```
+
 
 <!-- ROADMAP 
 ## Roadmap

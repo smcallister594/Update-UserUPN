@@ -5,10 +5,12 @@ Function Update-UserUPN {
         [string]$OU,
         [Parameter(Mandatory, ValueFromPipeline, ParameterSetName = 'UsingSamAccountName', Position = 0)]
         [string]$SamAccountName,
-        [Parameter()]$ReportOnly
+        [Parameter()]
+        [switch]
+        $ReportOnly
     )
     Process {
-        if ($ReportOnly){
+        if ($ReportOnly.IsPresent){
             Get-ADUser -SearchBase $OU -filter * -properties EmailAddress | Select UserPrincipalName, EmailAddress, Enabled | Sort-Object EmailAddress
         }
         elseif ($OU) {

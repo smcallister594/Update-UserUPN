@@ -21,7 +21,7 @@ Function Update-UserUPN {
         }
         $users = Get-ADUser @params
         if ($ReportOnly) {
-            $users | Select-Object UserPrincipalName, EmailAddress, Description, Enabled | Sort-Object EmailAddress
+            $users | Select-Object UserPrincipalName, EmailAddress, Description | Sort-Object EmailAddress
         } else {
             foreach ($user in $users) {
                 Set-ADUser -Identity $user -UserPrincipalName $user.EmailAddress

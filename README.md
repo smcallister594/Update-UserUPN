@@ -69,7 +69,7 @@ To get a local copy up and running follow these simple steps.
 * Appropriate domain suffixes configured in Active Directory
 ### Installation
 
-1. This module is available via the Powershell Gallery
+1. This module is available via the [Powershell Gallery](https://www.powershellgallery.com/packages/Update-UserUPN)
 ```Powershell
 Install-Module -Name Update-UserUPN
 ```
